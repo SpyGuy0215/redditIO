@@ -324,6 +324,13 @@ class RedditIO:
 
         spinner.stop()
 
+        spinner = halo.Halo(text='Cleaning up Files...', spinner='dots')
+        spinner.start()
+
+        self.cleanup()
+
+        spinner.stop()
+
     # def upload_video_with_new_API(self):
     #     client = Client(api_key=C.API_KEY)
     #
