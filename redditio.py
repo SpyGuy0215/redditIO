@@ -74,14 +74,19 @@ class RedditIO:
         spinner.stop()
 
         already_made = False
-        with open('./video_list.json', 'r') as f:
-            video_list = json.load(f)
-            for i in video_list['videos']:
-                if i == post_info['title']:
-                    already_made = True
-                    break
-        if not already_made:
-            video_list['videos'].append(post_info['title'])
+        if os.path.isfile('./video_list.json'):
+            with open('./video_list.json', 'r') as f:
+                video_list = json.load(f)
+                for i in video_list['videos']:
+                    if i == post_info['title']:
+                        already_made = True
+                        break
+            if not already_made:
+                video_list['videos'].append(post_info['title'])
+                with open('./video_list.json', 'w') as f:
+                    json.dump(video_list, f)
+        else:
+            video_list = {'videos': [post_info['title']]}
             with open('./video_list.json', 'w') as f:
                 json.dump(video_list, f)
 
