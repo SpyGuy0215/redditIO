@@ -5,3 +5,4 @@ output
 videos/*
 .idea
 geckodriver.log
+video_list.json
