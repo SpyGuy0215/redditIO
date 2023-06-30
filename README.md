@@ -30,17 +30,23 @@ pip install -r requirements.txt
 ```
 (This may take a while, since there are a lot of dependencies)
 
+Go to `constants.py` and replace the `FIREFOX_BINARY_PATH` with the path to your
+browser binary. The name doesn't have to be changed if you use another browser, 
+but feel free to if you want (don't forget to change it wherever it's used in the
+program as well!)
+
+Make a folder called `videos`. This is where the
+program will get the base clips. Get a clip and title
+it `clip1.mp4`, and put it in the `videos` folder. For
+an example of this, go to 
+[this link](https://www.dropbox.com/sh/zo923x3cqhld6u2/AABXBbSmJeVmqaAoYEgJc8yIa?dl=0)
+
 This program comes packaged with GeckoDriver, which is used to control Firefox. If
 this version doesn't work for you, or if you want to control another browser,
 download the driver for that platform (ex: ChromeDriver for Chrome) and replace 
 `geckodriver.exe` with the new driver. Then, in the code, replace all instances of
 `webdriver.Firefox` with `webdriver.<browser>`, where `<browser>` is the name of 
 the browser you want to use. (ex: `webdriver.Chrome`)
-
-Go to `constants.py` and replace the `FIREFOX_BINARY_PATH` with the path to your
-browser binary. The name doesn't have to be changed if you use another browser, 
-but feel free to if you want (don't forget to change it wherever it's used in the
-program as well!)
 
 ## Usage
 
