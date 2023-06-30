@@ -1,0 +1,7 @@
+output
+
+# Ignore the ZIP file of the main video and clips,
+# Too big to go to remote
+videos/*
+.idea
+geckodriver.log
