@@ -6,3 +6,5 @@ videos/*
 .idea
 geckodriver.log
 video_list.json
+
+__pycache__
